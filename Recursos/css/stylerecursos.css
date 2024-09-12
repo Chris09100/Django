@@ -1,0 +1,130 @@
+/* diseño de pestaña de recursos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9fafb; /* Color de fondo azul claro */
+    color: #333; /* Color de texto gris oscuro */
+}
+
+/* Estilo del header */
+header {
+    background-color: #ffffff; /* Azul oscuro */
+    color: #3498db; /* Blanco */
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-family: 'Verdana', sans-serif;
+    font-size: 2.5em;
+}
+
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #3498db;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+a.button:hover {
+    background-color: #1e5e89;
+}
+
+/* Estilo principal del contenedor */
+.contenedor {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #ffffff; /* Blanco */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #004d8b; /* Verde medio */
+    font-family: 'Verdana', sans-serif;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #009966; /* Verde medio */
+    font-family: 'Verdana', sans-serif;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #1e5e89; /* Verde medio */
+    font-family: 'Verdana', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Estilo del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #003366; /* Azul oscuro */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #009966; /* Verde medio */
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #004d99; /* Azul medio */
+    color: #ffffff; /* Blanco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Verdana', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #003366; /* Azul oscuro en hover */
+}
+
+/* Estilo del checkbox y su label */
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+label[for="aceptar-politica"] {
+    font-size: 0.9em;
+    color: #003366; /* Azul oscuro */
+}
+
+a {
+    color: #009966; /* Verde medio */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
