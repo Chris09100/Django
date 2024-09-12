@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Django Framework</title>
+    <link rel="stylesheet" href="Recursos/css/stylecontacto.css">
+</head>
+<body>
+    <header>
+        <h1>CONTACTO</h1>
+    </header>
+    
+    <!-- Menú de navegación -->
+    <center>
+    <nav>
+        <a class="button" href="index.html">Inicio</a>
+        <a class="button" href="crud.html">Crud en Django</a>
+        <a class="button" href="contacto.html">Contacto</a>
+        <a class="button" href="recursos.html">Recursos</a>
+        <a class="button" href="nosotros.html">Nosotros</a>
+    </nav>
+    </center>
+    
+    <!-- Contenedor principal del formulario -->
+    <main class="contenedor">
+        <h2>Contáctanos</h2>
+        <form action="/enviar" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+           
+            <label for="correo">E-mail:</label>
+            <input type="email" id="correo" name="correo" required>
+            
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+           
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero" required>
+                <option value="">Seleccione...</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <label for="tipo-mensaje">Tipo de mensaje:</label>
+            <select id="tipo-mensaje" name="tipo-mensaje" required>
+                <option value="">Seleccione...</option>
+                <option value="queja">Queja</option>
+                <option value="sugerencia">Sugerencia</option>
+                <option value="felicitacion">Opinión</option>
+            </select>
+
+            <label for="mensaje">Escríbenos aquí:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+           
+            <div>
+                <input type="checkbox" id="aceptar-politica" name="aceptar-politica" required>
+                <label for="aceptar-politica">He leído y acepto la <a href="https://www.ejemplo.com/politica-de-privacidad" target="_blank">política de privacidad</a>.</label>
+            </div>
+            <center>
+                <!-- Botón --> 
+                 <button class="button" onclick="mostrarAlerta()">Enviar</button>
+                <!-- Fin Botón -->
+                 </center>
+        
+                <!-- Función JS -->
+                <script>
+                    function mostrarAlerta() {
+                        alert('¡Su mensaje ha sido enviado');
+                    }
+                </script>
+                <!-- Fin Función JS -->
