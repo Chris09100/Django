@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylecrud.css">
+    <title>PIA</title>
+</head>
+<body>
+                <div class="contenedor">
+                    <a class="button" href="index.html">Inicio</a>
+                    <a class="button" href="Crud.html">Crud en Django</a>
+                    <a class="button" href="contacto.html">Contacto</a>
+                    <a class="button" href="recursos.html">Recursos</a>
+                    <a class="button" href="nosotros.html">Nosotros</a>
+            </div>
+        <section>
+
+            <article class="crud-page">
+                <div class="crud-container">
+                    <h2 class="crud-title">Creacion de 'CRUD' en Django</h2>
+                    <p class="crud-description">
+                        A continuación, se presentarán los pasos a seguir para la creación de un 'CRUD' en Django desde cero.
+                    </p>
+            
+                    <!-- Paso 1 -->
+                    <div class="step">
+                        <h3>1. Crea una carpeta para tu proyecto Django</h3>
+                        <p>Crea una carpeta donde trabajarás tu proyecto Django. El nombre y la ubicación de la carpeta dependen completamente del usuario. Una vez creada la carpeta, ingresa a ella y ejecuta los comandos desde cualquier terminal (CMD, Visual Studio Code o Git Bash).</p>
+                    </div>
+
+                    <!-- Paso 2 -->
+                    <div class="step">
+                        <h3>2. Crea un entorno virtual</h3>
+                        <p>Usa el siguiente comando para crear un entorno virtual:</p>
+                        <div class="code-block">
+                            <code id="code2">python -m venv env</code>
+                            <button class="copy-btn" id="btn2" onclick="copyToClipboard('code2', 'btn2')">Copiar</button>
+                        </div>
+                    </div>
+
+                    <!-- Paso 3 -->
+                    <div class="step">
+                        <h3>3. Activa el entorno virtual</h3>
+                        <p>Activa el entorno virtual con el siguiente comando:</p>
+                        <div class="code-block">
+                            <code id="code3">source env/Scripts/activate</code>
+                            <button class="copy-btn" id="btn3" onclick="copyToClipboard('code3', 'btn3')">Copiar</button>
+                        </div>
+                        <p>Nota: “env” es el nombre del entorno virtual.</p>
+                    </div>
+
+                    <!-- Paso 4 -->
+                    <div class="step">
+                        <h3>4. Instala Django</h3>
+                        <p>Instala Django en el entorno virtual con el siguiente comando:</p>
+                        <div class="code-block">
+                            <code id="code4">pip install django</code>
+                            <button class="copy-btn" id="btn4" onclick="copyToClipboard('code4', 'btn4')">Copiar</button>
+                        </div>
+                    </div>
+
+                    <!-- Paso 5 -->
+                    <div class="step">
+                        <h3>5. Inicia un nuevo proyecto Django</h3>
+                        <p>Crea un nuevo proyecto Django con el siguiente comando:</p>
+                        <div class="code-block">
+                            <code id="code5">django-admin startproject nombredelproyecto</code>
+                            <button class="copy-btn" id="btn5" onclick="copyToClipboard('code5', 'btn5')">Copiar</button>
+                        </div>
+                        <p>Luego, ingresa a la carpeta del proyecto con:</p>
+                        <div class="code-block">
+                            <code id="code6">cd nombredelproyecto</code>
+                            <button class="copy-btn" id="btn6" onclick="copyToClipboard('code6', 'btn6')">Copiar</button>
+                        </div>
+                    </div>
+
+                    <!-- Paso 6 -->
+                    <div class="step">
+                        <h3>6. Configura la base de datos</h3>
+                        <p>Para crear la base de datos y aplicar las migraciones, usa el siguiente comando:</p>
+                        <div class="code-block">
+                            <code id="code7">python manage.py migrate</code>
+                            <button class="copy-btn" id="btn7" onclick="copyToClipboard('code7', 'btn7')">Copiar</button>
+                        </div>
+                    </div>
+
+                    <!-- Paso 7 -->
+                    <div class="step">
+                        <h3>7. Ejecuta el servidor</h3>
+                        <p>Inicia el servidor de desarrollo con el siguiente comando:</p>
+                        <div class="code-block">
+                            <code id="code8">python manage.py runserver</code>
+                            <button class="copy-btn" id="btn8" onclick="copyToClipboard('code8', 'btn8')">Copiar</button>
+                        </div>
+                        <p>El servidor estará disponible en las siguientes direcciones:<br>
+                            <a style="color: aquamarine; margin-left: 25px;" href="http://127.0.0.1:8000/" target="_blank">http://127.0.0.1:8000/</a><br>
+                            <a style="color: aquamarine; margin-left: 25px;" href="http://localhost:8000/" target="_blank">http://localhost:8000/</a></p>
+                        <p>Para detener el servidor, presiona <kbd>Ctrl + C</kbd> en la terminal.</p>
+                    </div>
+
+                    <!-- Paso 8 -->
+                    <div class="step">
+                        <h3>8. Crea un superusuario</h3>
+                        <p>Crea un usuario administrador con el siguiente comando:</p>
+                        <div class="code-block">
+                            <code id="code9">python manage.py createsuperuser</code>
+                            <button class="copy-btn" id="btn9" onclick="copyToClipboard('code9', 'btn9')">Copiar</button>
+                        </div>
+                        <p>Si estás usando Git Bash, usa el siguiente comando:</p>
+                        <div class="code-block">
+                            <code id="code10">winpty python manage.py createsuperuser</code>
+                            <button class="copy-btn" id="btn10" onclick="copyToClipboard('code10', 'btn10')">Copiar</button>
+                        </div>
+                        <p>Este comando te pedirá ingresar los datos del superusuario.</p>
+                    </div>
+
+                    <!-- Paso 9 -->
+                    <div class="step">
+                        <h3>9. Crea una aplicación</h3>
+                        <p>Crea una aplicación para registrar los modelos con el siguiente comando:</p>
+                        <div class="code-block">
+                            <code id="code11">python manage.py startapp productos</code>
+                            <button class="copy-btn" id="btn11" onclick="copyToClipboard('code11', 'btn11')">Copiar</button>
+                        </div>
+                        <p>Luego, abre el archivo <code>settings.py</code> y añade la aplicación creada en <code>INSTALLED_APPS</code>:</p>
+                        <div class="code-block">
+                            <code id="code12">'productos.apps.ProductosConfig',</code>
+                            <button class="copy-btn" id="btn12" onclick="copyToClipboard('code12', 'btn12')">Copiar</button>
+                        </div>
+                    </div>
+
+                    <!-- Paso 10 -->
+                    <div class="step">
+                        <h3>10. Define y registra modelos</h3>
+                        <p>Para crear un modelo, abre el archivo <code>models.py</code> y define el modelo. Ejemplo:</p>
+                        <div class="code-block">
+                            <code id="code13"><pre>class Producto(models.Model):</pre><pre>    nombre = models.CharField(max_length=100)</pre><pre>    precio = models.DecimalField(max_digits=10, decimal_places=2)</pre><pre>    descripcion = models.TextField()</pre><pre>    fecha_creacion = models.DateTimeField(auto_now_add=True)</pre><br><pre>    def __str__(self):</pre><pre>        return self.nombre</pre></code>
+                            <button class="copy-btn" id="btn13" onclick="copyToClipboard('code13', 'btn13')">Copiar</button>
+                        </div>
+                        <p>Ejecuta los siguientes comandos para crear y aplicar las migraciones:</p>
+                        <div class="code-block">
+                            <code id="code14">python manage.py makemigrations</code>
+                            <button class="copy-btn" id="btn14" onclick="copyToClipboard('code14', 'btn14')">Copiar</button>
+                        </div>
+                        <div class="code-block">
+                            <code id="code15">python manage.py migrate</code>
+                            <button class="copy-btn" id="btn15" onclick="copyToClipboard('code15', 'btn15')">Copiar</button>
+                        </div>
+                        <p>Finalmente, registra el modelo en el panel de administración editando el archivo <code>admin.py</code> y añadiendo:</p>
+                        <div class="code-block">
+                            <code id="code16">from .models import Producto</code>
+                            <button class="copy-btn" id="btn16" onclick="copyToClipboard('code16', 'btn16')">Copiar</button>
+                        </div>
+                        <div class="code-block">
+                            <code id="code17">admin.site.register(Producto)</code>
+                            <button class="copy-btn" id="btn17" onclick="copyToClipboard('code17', 'btn17')">Copiar</button>
+                        </div>
+                    </div>
+            </article>
+            
+            <script>
+                function copyToClipboard(elementId, buttonId) {
+                    var text = document.getElementById(elementId).innerText;
+                    var button = document.getElementById(buttonId);
+            
+                    navigator.clipboard.writeText(text).then(function() {
+                        button.innerText = '✓ Copiado';
+                        button.style.backgroundColor = '#28a745';
+            
+                        setTimeout(function() {
+                            button.innerText = 'Copiar';
+                            button.style.backgroundColor = ''; 
+                        }, 1000);
+                    }, function(err) {
+                        console.error("Error al copiar el texto: ", err);
+                    });
+                }
+            </script>
+            
+            
+        </section>
+    </main>
+</body>
+</html>
+

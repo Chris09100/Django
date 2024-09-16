@@ -1,0 +1,128 @@
+/* Establece el fondo blanco para toda la página */
+body {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #333333; /* Color de texto gris oscuro */
+    font-family: Arial, sans-serif; /* Fuente clara y moderna */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centra el texto por defecto */
+}
+
+/* Estiliza la barra de navegación */
+.nbar {
+    background-color: #0056b3; /* Azul oscuro */
+    color: #ffffff; /* Texto blanco */
+    padding: 10px 0;
+}
+
+/* Encabezado principal */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+
+.nbar header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto .sg {
+    font-size: 24px;
+}
+
+
+/* Enlaces */
+.contenedor {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(240, 32, 32);
+}
+
+/* Botón de enlace */
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #3498db;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+a.button:hover {
+    background-color: #2980b9;
+}
+
+/* Estilo del contenedor de tarjetas */
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Estilo de las tarjetas */
+.tarjeta {
+    background-color: #f1f1f1; /* Color de fondo ligero para las tarjetas */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    margin: 0 auto; /* Centra las tarjetas dentro del contenedor */
+}
+
+.tarjeta figure {
+    margin: 0;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: auto;
+}
+
+.contenido {
+    padding: 15px;
+}
+
+.contenido h3 {
+    margin: 0 0 10px;
+    color: #0056b3; /* Azul oscuro */
+}
+
+.contenido h4 {
+    margin: 0 0 10px;
+    color: #009688; /* Verde oscuro */
+}
+
+.contenido h5 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.contenedor {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
