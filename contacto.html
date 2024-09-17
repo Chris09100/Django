@@ -46,8 +46,8 @@
                 <option value="otro">Otro</option>
             </select>
 
-            <label for="tipo-mensaje">Tipo de mensaje:</label>
-            <select id="tipo-mensaje" name="tipo-mensaje" required>
+            <label for="tipoMensaje">Tipo de mensaje:</label>
+            <select id="tipoMensaje" name="tipoMensaje" required>
                 <option value="">Seleccione...</option>
                 <option value="queja">Queja</option>
                 <option value="sugerencia">Sugerencia</option>
@@ -66,5 +66,26 @@
                  <button class="button" onclick="mostrarAlerta()">Enviar</button>
                 <!-- Fin Botón -->
                  </center>
-                </body>
+                 
+                 <script>
+                    function mostrarAlerta() {
+                    var nombre = document.getElementById("nombre").value;
+                    var apellidos = document.getElementById("apellidos").value;
+                    var correo = document.getElementById("correo").value;
+                    var telefono = document.getElementById("telefono").value;
+                    var genero = document.getElementById("genero").value;
+                    var tipoMensaje = document.getElementById("tipoMensaje").value;
+                     var mensaje = document.getElementById("mensaje").value;
+    
+                     // Validar si todos los campos están llenos
+                    if (nombre === "" || apellidos === "" || correo === "" || telefono === "" || genero === "" || tipoMensaje === "" || mensaje === "") {
+                    alert("Todos los campos son obligatorios.");
+                    return false;  // Impide el envío si faltan campos
+                    } else {
+                    alert("Gracias, " + nombre + ", por enviar el formulario.");  // Mensaje personalizado con el nombre
+                    return true;  // Permite el envío del formulario si todo está completo
+                }
+            }
+         </script>
+        </body>
 </html>
